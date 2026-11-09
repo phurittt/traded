@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'IBM Plex Sans Thai', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #fffbe6;
+  --color-brand-100: #fff3bf;
+  --color-brand-200: #ffe780;
+  --color-brand-300: #ffdc4d;
+  --color-brand-400: #ffd21f;
+  --color-brand-500: #ffc800;
+  --color-brand-600: #e0a800;
+
+  --color-ink: #17150f;
+  --color-muted: #6b6657;
+  --color-paper: #fbf9f2;
+  --color-line: #ece7d8;
+
+  --color-up: #0b7f47;
+  --color-down: #d11f2f;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+
+  button:not(:disabled),
+  a,
+  select,
+  label[for] {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
